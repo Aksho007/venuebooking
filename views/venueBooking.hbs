@@ -1,0 +1,160 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue Booking</title>
+    <link rel="stylesheet" href="/style/venueBooking.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="logo"><img src="/images/juit-logo.png" alt="LOGO" /></div>
+      <div class="container">
+        <div class="title">VENUE BOOKING</div>
+        {{#if success}}
+          <div class="alert alert-primary" role="alert">{{success}}</div>
+        {{/if}}
+        <div class="form">
+          <form
+            name="form"
+            action="/booking"
+            method="post"
+            onsubmit="validateForm()"
+          >
+            <div class="form-options">
+              <div class="name">
+                <input
+                  type="text"
+                  class="option"
+                  id="name"
+                  name="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </div>
+              <div class="email">
+                <input
+                  type="email"
+                  class="option"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  required
+                />
+              </div>
+              <div class="number">
+                <input
+                  type="text"
+                  class="option"
+                  id="number"
+                  name="number"
+                  placeholder="Enter Your Phone Number"
+                  maxlength="10"
+                  required
+                />
+              </div>
+              <div class="venue">
+                <select
+                  id="venue"
+                  class="option venue-option"
+                  name="venue"
+                  required
+                >
+                  <option value="select" class="option disabled">
+                    Select the venue
+                  </option>
+                  <option value="LT1" class="option">LT1</option>
+                  <option value="LT2" class="option">LT2</option>
+                  <option value="LT3" class="option">LT3</option>
+                  <option value="CR1" class="option">CR1</option>
+                  <option value="CR2" class="option">CR2</option>
+                  <option value="CR3" class="option">CR3</option>
+                  <option value="CR4" class="option">CR4</option>
+                  <option value="CR5" class="option">CR5</option>
+                  <option value="CR6" class="option">CR6</option>
+                  <option value="CR7" class="option">CR7</option>
+                  <option value="CR8" class="option">CR8</option>
+                  <option value="CR9" class="option">CR9</option>
+                  <option value="CR10" class="option">CR10</option>
+                  <option value="CR11" class="option">CR11</option>
+                  <option value="CR12" class="option">CR12</option>
+                  <option value="Tutorial 1" class="option">Tutorial 1</option>
+                  <option value="Tutorial 2" class="option">Tutorial 2</option>
+                  <option value="Tutorial 3" class="option">Tutorial 3</option>
+                  <option value="Tutorial 4" class="option">Tutorial 4</option>
+                  <option value="Tutorial 5" class="option">Tutorial 5</option>
+                  <option value="Tutorial 6" class="option">Tutorial 6</option>
+                  <option value="Tutorial 7" class="option">Tutorial 7</option>
+                  <option value="Tutorial 8" class="option">Tutorial 8</option>
+                  <option value="Tutorial 9" class="option">Tutorial 9</option>
+                  <option value="BoldRoom" class="option">BoldRoom</option>
+                  <option value="IQAC Cell" class="option">IQAC Cell</option>
+                  <option value="Auditorium" class="option">Auditorium</option>
+                </select>
+              </div>
+
+              <div class="timeFrom">
+                <input
+                  type="time"
+                  id="timeFrom"
+                  name="timeFrom"
+                  class="option"
+                  placeholder="Date And Time"
+                  required
+                />
+              </div>
+              <div class="timeTo">
+                <input
+                  type="time"
+                  id="timTto"
+                  name="timeTo"
+                  class="option"
+                  placeholder="Date And Time"
+                  required
+                />
+              </div>
+              <div class="date">
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="option"
+                  placeholder="Date And Time"
+                  required
+                />
+              </div>
+              <div class="purpose">
+                <textarea
+                  type="message"
+                  id="purpose"
+                  class="booking-purpose option"
+                  name="purpose"
+                  placeholder="Enter Your Purpose For Booking"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="submit">
+                <button
+                  onclick="validateForm()"
+                  id="submit"
+                  class="option submit"
+                >
+                  Submit
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

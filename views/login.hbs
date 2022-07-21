@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue Booking : Login</title>
+    <link rel="stylesheet" href="/style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="leftContainer">
+          <div class="logo">
+            <img id="logo" src="/images/juit-logo.png" alt="Logo" />
+          </div>
+          <form method="POST" action="/" id="form">
+            <div class="EmailInput">
+              <input
+                id="email"
+                type="email"
+                name="loginEmail"
+                class="login-input email"
+                placeholder="Enter Your Email"
+                required
+              /><b><script></script></b>
+            </div>
+
+            <div class="PasswordInput">
+              <input
+                id="password"
+                name="loginPassword"
+                type="password"
+                class="login-input password"
+                placeholder="Enter Your Password"
+                required
+              />
+            </div>
+            <div class="loginButton">
+              <button type="submit" id="LoginButton" class="login-input">
+                Login
+              </button>
+            </div>
+          </form>
+          {{#if success}}
+
+          <div class="alert alert-danger" role="alert">{{success}}</div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="rightContainer">
+          <div class="juit">Jaypee University Of Information Technology</div>
+          <div class="approval">
+            Approved by UGC under Section 2f of UGC Act
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

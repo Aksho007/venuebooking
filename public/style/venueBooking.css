@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(90deg, #e5e5e5 50%, #5479fa 50%);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+.logo {
+  justify-self: flex-start;
+  margin-bottom: -9rem;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+img {
+  height: 6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-color: #f5f6fa;
+  width: 70vw;
+  padding-bottom: 2rem;
+  border: 5px;
+  border-color: black;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+.underline {
+  width: 15vw;
+  height: 3px;
+  border: 0;
+  margin-bottom: 1rem;
+  background-color: #5479fa;
+}
+.title {
+  margin-top: 2rem;
+  font-size: 3vw;
+  text-align: center;
+}
+.form-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.option {
+  width: 30vw;
+  height: 45px;
+  border: 0;
+  border-radius: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.venue-option {
+  width: 30vw;
+}
+
+#submit {
+  background-color: #5479fa;
+  color: white;
+  width: 15vw;
+}
+
+.booking-purpose {
+  height: 80px;
+  padding-top: 10px;
+}
+.submit {
+  padding-left: 0;
+}
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+@media only screen and (max-width: 600px) {
+  .option {
+    height: 35px;
+    width: 38vw;
+  }
+  .title {
+    font-size: 1.5rem;
+    height: 0rem;
+  }
+  .logo {
+    justify-self: center;
+    margin-bottom: -2rem;
+    margin-top: 2rem;
+    margin-left: 0;
+    z-index: 100;
+  }
+
+  .underline {
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+
+  .logo img {
+    height: 60px;
+    width: 50px;
+  }
+  .venue-option {
+    width: 40vw;
+  }
+
+  .option::placeholder {
+    font-size: 0.7rem;
+  }
+
+  .booking-purpose {
+    height: 100px;
+  }
+
+  #submit {
+    background-color: #5479fa;
+    color: white;
+    width: 20vw;
+  }
+  .alert-primary {
+    font-size: 10px;
+  }
+}
